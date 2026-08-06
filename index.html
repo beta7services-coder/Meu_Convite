@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convite Rafael & Renata</title>
+
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/convite2.css">
+    <link rel="shortcut icon" href="img/Logo.jpg" type="image/x-icon">
+</head>
+
+<body>
+
+    <!-- CAPA -->
+    <div id="capa" class="img-cvt">
+        <img src="img/capa_cvt.jfif">
+
+        <button id="abrirConvite" class="btn-ivs"></button>
+    </div>
+
+    <!-- CONVITE -->
+    <div id="convite" class="convite" style="display:none;">
+
+        <img src="img/WhatsApp Image 2026-08-03 at 21.27.28.jpeg">
+
+        <a href="https://www.google.com/maps?ll=-3.873253,-38.616155&z=16&t=m&hl=pt-BR&gl=US&mapclient=embed&q=Av.+Durval+Tomaz+de+Sousa+-+Jereissati+-+Setor+B+Maracana%C3%BA+-+CE+61900-390"
+            class="btn btn-localizacao"
+            target="_blank"></a>
+
+        <a href="https://noivos.casar.com/renata-e-rafael-2026-12-18#/rsvp"
+            class="btn btn-presentes"
+            target="_blank"></a>
+
+        <a href="https://noivos.casar.com/renata-e-rafael-2026-12-18#/presentes"
+            class="btn btn-confirmacao"
+            target="_blank"></a>
+
+    </div>
+
+    <audio id="musica" loop playsinline>
+        <source src="audio/WhatsApp Audio 2026-08-03 at 23.27.36.mp4" type="audio/mp4">
+    </audio>
+
+<script>
+
+const botao = document.getElementById("abrirConvite");
+const capa = document.getElementById("capa");
+const convite = document.getElementById("convite");
+const musica = document.getElementById("musica");
+
+botao.addEventListener("click", async () => {
+
+    try{
+        await musica.play();
+    }catch(e){
+        console.log(e);
+    }
+
+    capa.style.display="none";
+    convite.style.display="block";
+
+});
+
+</script>
+
+</body>
+</html>
